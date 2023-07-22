@@ -1,0 +1,13 @@
+{
+    "name": "sajjadsaljoghi/composerproject",
+    "description": "this is a project for daneshjooyar and made it with composer",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\" : "app/"
+        }
+    },
+    "require": {
+        "respect/validation": "2.2.4"
+    }
+}
