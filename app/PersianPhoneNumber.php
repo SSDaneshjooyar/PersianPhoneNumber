@@ -8,10 +8,20 @@
 class PersianPhoneNumber{
     
     public function validate(string $phoneNumber) : bool{
-        $length = new Length(11,13);
-        if($length->validate($phoneNumber)){
-            if(str_starts_with($phoneNumber,"+98") || str_starts_with($phoneNumber,"09"))
+        $length13 = new Length(13);
+        $length11 = new Length(11);
+        if(str_starts_with($phoneNumber,"+98")){
+            if($length13->validate($phoneNumber)){
                 return true;
+            }
+            else
+                return false;
+        }
+        else if(str_starts_with($phoneNumber,"09"))
+        {
+            if($length11->validate($phoneNumber)){
+                return true;
+            }
             else
                 return false;
         }
